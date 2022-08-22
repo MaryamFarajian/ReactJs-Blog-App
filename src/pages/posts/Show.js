@@ -10,7 +10,7 @@ const ShowPost = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+    fetch(`http://localhost:8000/posts/${postId}`)
       .then((res) => res.json())
       .then((data) => {
         setPost(data);

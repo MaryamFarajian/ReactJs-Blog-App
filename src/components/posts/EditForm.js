@@ -11,7 +11,7 @@ const EditForm = ({ post }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}`, {
+    fetch(`http://localhost:8000/posts/${post.id}`, {
       method: "PUT",
       body: JSON.stringify({
         title,

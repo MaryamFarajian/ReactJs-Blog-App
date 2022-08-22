@@ -6,7 +6,7 @@ const DeletePost = ({ postId }) => {
   const [error, setError] = useState(null);
   const handleDelete = () => {
     setLoading(true);
-    fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {
+    fetch(`http://localhost:8000/posts/${postId}`, {
       method: "DELETE",
     })
       .then((response) => {

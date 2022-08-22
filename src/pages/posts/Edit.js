@@ -10,7 +10,7 @@ const EditPost = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+    fetch(`http://localhost:8000/posts/${postId}`)
       .then((response) => response.json())
       .then((data) => {
         setPost(data);
