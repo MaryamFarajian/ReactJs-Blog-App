@@ -1,35 +1,38 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import EditFormPost from "../../components/posts/EditForm"; 
+import EditFormPost from "../../components/posts/EditForm";
+import image from "../../img/image1.png";
 
-const EditPost = ()=>{
-    const { postId } = useParams();
-    const [post, setPost] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+const EditPost = () => {
+  const { postId } = useParams();
+  const [post, setPost] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-
-    useEffect(() => {
-
-        fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
-            .then(res => res.json())
-            .then(data => {
-                setPost(data);
-                setLoading(false)
-                setError(null)
-            }).catch(err => {
-                setError(err.message)
-                setLoading(false)
-            })
-
-    }, [postId]);
-return(
+  useEffect(() => {
+    fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setPost(data);
+        setLoading(false);
+        setError(null);
+      })
+      .catch((err) => {
+        setError(err.message);
+        setLoading(false);
+      });
+  }, [postId]);
+  return (
     <>
-    <h2>Edit Post: </h2>
+    
       {error && <div>{error}</div>}
-                {loading && <div className="spinner-border"></div>}
-                {post && <EditFormPost post={post} />}
+      {loading && <div className="spinner-border"></div>}
+      {post && <EditFormPost post={post} />}
+      <div className="col-md-6 rounded-1">
+        <img className="col-md-12" src={image} alt="test" />
+      </div>
+    
     </>
-)
-}
+  );
+};
 export default EditPost;
