@@ -8,7 +8,7 @@ const IndexPost = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
+    fetch("http://localhost:8000/posts")
       .then((res) => res.json())
       .then((data) => {
         setPosts(data);

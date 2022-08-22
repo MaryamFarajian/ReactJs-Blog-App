@@ -78,6 +78,6 @@ npm install json-server
 
 running json server:
 ```bash
-json-server --watch db.json
+json-server --watch db.json --port 8000
 ```
 

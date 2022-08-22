@@ -11,7 +11,7 @@ const CreatePost = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    fetch("https://jsonplaceholder.typicode.com/posts", {
+    fetch("http://localhost:8000/posts", {
       method: "POST",
       body: JSON.stringify({
         title,
