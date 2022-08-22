@@ -22,8 +22,7 @@ const Header = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <NavLink
-                className="nav-link"
-                activeClassName="active"
+                className="nav-link active"
                 aria-current="page"
                 to="/"
               >
@@ -32,8 +31,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                className="nav-link"
-                activeClassName="active"
+                className="nav-link active"
                 to="/users"
               >
                 Users
@@ -41,8 +39,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                className="nav-link"
-                activeClassName="active"
+                className="nav-link active"
                 to="/posts"
               >
                 Posts
