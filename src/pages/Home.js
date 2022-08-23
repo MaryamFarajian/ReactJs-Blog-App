@@ -1,3 +1,4 @@
+import React from "react";
 import image from "../img/image.png";
 import { Link } from "react-router-dom";
 const Home = () => {

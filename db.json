@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "title": "test",
+      "body": "test2",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "title": "hi",
+      "body": "how are you",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "title": "test3",
+      "body": "33",
+      "userId": 1,
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

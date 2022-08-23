@@ -1,3 +1,5 @@
+
+import React from "react";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
@@ -15,7 +17,7 @@ const DeletePost = ({ postId }) => {
         Swal.fire({
           title: "Thanks!",
           text: `Post ${postId} delete successfully`,
-          icon: "success",
+          icon: "warning",
           confirmButtonText: "Ok",
         });
       })

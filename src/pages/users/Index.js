@@ -1,5 +1,7 @@
+import React from 'react';
 import { useEffect, useState } from "react";
 import ListUsers from "../../components/users/List";
+
 
 const IndexUser = () => {
   const [users, setUsers] = useState(null);
